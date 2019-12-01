@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2019_12_01_184652) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
+    t.index ["batch_guid"], name: "index_batch_files_on_batch_guid", unique: true
+    t.index ["file_guid"], name: "index_batch_files_on_file_guid", unique: true
   end
 
   create_table "invoice_parcel_items", force: :cascade do |t|

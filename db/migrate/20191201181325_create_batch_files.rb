@@ -5,6 +5,9 @@ class CreateBatchFiles < ActiveRecord::Migration[6.0]
       t.string :batch_guid
 
       t.timestamps
+
+      t.index :file_guid, unique: true
+      t.index :batch_guid, unique: true
     end
   end
 end
