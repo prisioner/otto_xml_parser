@@ -1,7 +1,7 @@
 class BatchFile < ApplicationRecord
   STATUSES = %w[duplicate error pending success].freeze
 
-  has_many :invoices
+  has_many :invoices, dependent: :destroy
   has_one_attached :file
 
   scope :ordered, -> { order(created_at: :desc) }
