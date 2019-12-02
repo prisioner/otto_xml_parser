@@ -19,17 +19,27 @@ Rails 6.0.1
 Node 8.12.0
 ```
 
+##### Environment requirements
+```
+postgresql installed & launched
+redis installed & laucned
+yarn installed
+```
+
 ### Первый запуск
 ```
 gem install bundler
 bundle install
+cd client
+yarn install
+cd ..
 ```
 
 Затем подготавливаем базу данных:
 
 ```
-rails db:create
-rails db:migrate
+bundle exec rails db:create
+bundle exec rails db:migrate
 ```
 
 Запуск сервера
