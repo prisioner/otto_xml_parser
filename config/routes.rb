@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :batch_files, only: %i[create index]
+      resources :parcels, only: %i[show index]
+      resources :invoices, only: %i[show index]
     end
   end
 
