@@ -7,6 +7,8 @@ class CreateInvoices < ActiveRecord::Migration[6.0]
       t.references :batch_file, null: false, foreign_key: true
 
       t.timestamps
+
+      t.index :operation_number, unique: true
     end
   end
 end

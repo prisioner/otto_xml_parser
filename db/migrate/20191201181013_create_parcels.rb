@@ -4,6 +4,8 @@ class CreateParcels < ActiveRecord::Migration[6.0]
       t.string :code
 
       t.timestamps
+
+      t.index :code, unique: true
     end
   end
 end
