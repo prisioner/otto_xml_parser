@@ -9,6 +9,6 @@ class InvoiceParcelItem < ApplicationRecord
       invoice: invoice.operation_number,
       quantity: quantity,
       parcel_price: price,
-    }
+    }.stringify_keys
   end
 end
