@@ -4,6 +4,8 @@ class BatchFile < ApplicationRecord
   has_many :invoices
   has_one_attached :file
 
+  scope :ordered, -> { order(created_at: :desc) }
+
   before_validation :set_initial_status, on: :create
 
   validates :status, inclusion: { in: STATUSES }

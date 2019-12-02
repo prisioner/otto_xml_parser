@@ -1,6 +1,6 @@
 class Api::V1::BatchFilesController < ApplicationController
   def index
-    @batch_files = BatchFile.all
+    @batch_files = BatchFile.ordered
 
     render json: { data: @batch_files }
   end
