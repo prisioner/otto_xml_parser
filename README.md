@@ -1,24 +1,45 @@
-# README
+# XML Parser (Test Application)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Описание
 
-Things you may want to cover:
+Проект создан в рамках выполнения тестового задания
 
-* Ruby version
+##### Ruby version
+```
+ruby 2.6.1
+```
 
-* System dependencies
+##### Rails version
+```
+Rails 6.0.1
+```
 
-* Configuration
+##### Node version
+```
+Node 8.12.0
+```
 
-* Database creation
+### Первый запуск
+```
+gem install bundler
+bundle install
+```
 
-* Database initialization
+Затем подготавливаем базу данных:
 
-* How to run the test suite
+```
+rails db:create
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Запуск сервера
 
-* Deployment instructions
+```
+gem install foreman
+foreman start
+```
 
-* ...
+### Тесты
+```
+rspec
+```
