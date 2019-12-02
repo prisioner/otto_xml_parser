@@ -65,12 +65,14 @@ ActiveRecord::Schema.define(version: 2019_12_01_184652) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["batch_file_id"], name: "index_invoices_on_batch_file_id"
+    t.index ["operation_number"], name: "index_invoices_on_operation_number", unique: true
   end
 
   create_table "parcels", force: :cascade do |t|
     t.string "code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["code"], name: "index_parcels_on_code", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
